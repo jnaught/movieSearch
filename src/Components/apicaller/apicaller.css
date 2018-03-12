@@ -1,0 +1,35 @@
+.inputLine {
+  width: 500px;
+  height: 25px;
+  font-size: 20px;
+  color: black;
+  padding-bottom: 6px;
+  border: none;
+  border-bottom: solid 1px #3fbaf9;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: transparent;
+  margin-bottom: 20px;
+}
+
+.button {
+  width: 80px;
+  height: 30px;
+  background-color: transparent;
+  box-shadow: 5px 5px 5px grey;
+}
+.button:hover {
+  background-color: lightblue;
+}
+
+input::placeholder {
+  color: rgb(64, 167, 64);
+}
+.container {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
