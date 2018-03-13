@@ -20,10 +20,19 @@ class Search extends Component {
     axios
       .get(`${API_URL}?api_key=${apiKey}&query=${this.state.query}`)
       .then(response => {
+        // const selectedMovie = response.data.results;
+        // console.log("selected movie ", selectedMovie);
+        // axios
+        //   .get(
+        //     `https://api.themoviedb.org/3/movie/${selectedMovie}?api_key=${apiKey}&append_to_response=videos,images,casts`
+        //   )
+        //   .then(response2 => {
+        //     console.log("response2", response2);
+        //   });
         this.setState({
           results: response.data.results
         });
-
+        console.log("results ", this.state.results);
         console.log("search query: ", this.state.query);
       });
   };

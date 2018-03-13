@@ -4,23 +4,20 @@ import logo from "./header/tmdb_logo.jpg";
 // setup Suggestions to expect a prop named results.
 const Suggestions = props => {
   const options = props.results.map((r, i) => {
-    // console.log("Suggested Results: ", props.results);
-    const bgimage = `http://image.tmdb.org/t/p/w342${r.backdrop_path}`;
     return (
-      <ul
-        key={i}
-        className="listBG"
-        style={{ backgroundImage: `url(${bgimage})` }}
-      >
-        <object data={`http://image.tmdb.org/t/p/w342${r.poster_path}`}>
+      <ul key={i}>
+        <object
+          className="titleImage"
+          data={`http://image.tmdb.org/t/p/w500${r.poster_path}`}
+        >
           <img src={logo} alt="No Image To Display!" />
-          No Poster to Display!
         </object>
         <div className="result-container">
           <li className="title">{r.title}</li>
 
           <li className="releasedate"> Release Date: {r.release_date}</li>
           <li className="overview">Overview: {r.overview}</li>
+          {/* <li className="castmembers"> Cast: {r.data.data.casts}</li> */}
         </div>
       </ul>
     );

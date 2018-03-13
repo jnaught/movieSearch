@@ -54,7 +54,7 @@ class App extends Component {
         </div> */}
         <div>
           <Search />
-          <Body movie={this.state.movie} />
+          {/* <Body movie={this.state.movie} /> */}
         </div>
       </div>
     );
